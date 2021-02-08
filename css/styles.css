@@ -40,11 +40,25 @@ a:hover {
   align-items: center;
 }
 
+.site-nav .burger-header {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
 .site-logo {
   background: url(/images/logo.svg) no-repeat center/contain;
   width: 12rem;
   min-width: 9rem;
   height: 2.5rem;
+}
+
+.site-nav button.burger-opener {
+  display: none;
+  background: transparent;
+  outline: none;
+  border: none;
 }
 
 .site-nav ul.nav-menu {
@@ -325,6 +339,49 @@ footer {
 
   .page-header .site-nav ul.nav-menu {
     display: none;
+  }
+
+  .site-nav.site-nav-burger {
+    transition: all 1s ease-in-out;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: initial;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: inherit;
+    background: #000;
+    z-index: 50;
+  }
+
+  .site-nav-burger .burger-header {
+    margin-bottom: 100px;
+    padding: 0 25px;
+  }
+
+  .site-nav-burger ul.nav-menu-burger {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font: 300 2rem 'Josefin Sans', sans-serif;
+    padding: 0 25px;
+    text-align: start;
+  }
+
+  .site-nav button.burger-opener {
+    display: block;
+  }
+
+  .site-nav button.burger-opener:hover {
+    cursor: pointer;
+  }
+
+  .site-nav-burger ul.nav-menu-burger li {
+    padding: 5px 0;
+    margin: 10px 0;
   }
 
   .page-header h1 {
