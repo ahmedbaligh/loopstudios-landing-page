@@ -227,11 +227,7 @@ h2 {
   cursor: pointer;
 }
 
-.our-creations .creations .creation h3:hover {
-  color: #fff;
-}
-
-.our-creations .creations .creation img:hover {
+.our-creations .creations .creation:hover img {
   transition: 0.3s ease-in;
   filter: opacity(0.2);
 }
